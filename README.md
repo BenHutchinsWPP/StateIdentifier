@@ -5,7 +5,7 @@ The following resources were used while developing this application:
 - [Visual Studio Code](https://code.visualstudio.com/) 
 - [Node.js for Windows](https://nodejs.org/en#home-downloadhead)
 - [Getting Started with Vite](https://vitejs.dev/guide/)
-
+- [TailWindCSS with React + Vite](https://www.freecodecamp.org/news/how-to-install-tailwindcss-in-react/)
 
 
 # Git Setup
@@ -24,10 +24,15 @@ This project was created by running these commands:
   - Framework: React
   - Variant: JavaScript + SWC (Speedy Web Compiler - Rust)
 - npm install
-- npm run dev
 - npm install --save ag-grid-community
-- npm install -D tailwindcss
+- npm install -D tailwindcss postcss autoprefixer
 - npx tailwindcss init
+
+
+To start the page:
+- Open a VSC terminal
+  - npm run dev
+- CTRL-Click on the localhost link
 
 
 
