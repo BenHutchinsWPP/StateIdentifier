@@ -1,3 +1,12 @@
+# Overview
+This project was written as open-source code by the WPP, using the MIT open-source license.
+If you'd like to make improvements, pull-requests are welcome!
+
+To use the application, you may play with the latest live version here:
+[https://benhutchinswpp.github.io/StateIdentifier/](https://benhutchinswpp.github.io/StateIdentifier/)
+
+
+
 # Project Resources
 The following resources were used while developing this application:
 - [GitHub](https://github.com/)
@@ -12,7 +21,7 @@ The following resources were used while developing this application:
 - [d3-geo library](https://github.com/d3/d3-geo#geoContains)
 
 
-# Git Setup
+# Git Project Setup
 - Pre-Requisites:
   - Install Visual Studio Code
   - Setup a GitHub Account
@@ -23,31 +32,31 @@ The following resources were used while developing this application:
   - git config --global user.email johndoe@example.com
 
 # Project Creation
-This project was created by running these commands:
+This project was setup with the following packages:
 - npm create vite@latest
   - Framework: React
   - Variant: JavaScript + SWC (Speedy Web Compiler - Rust)
 - npm install
+- ISC License (The ISC license is functionally equivalent to the BSD 2-Clause and MIT licenses)
+  - npm install d3
+  - npm install d3-geo
+- MIT License:
+  - npx tailwindcss init
+  - npm install -D tailwindcss postcss autoprefixer
+  - npm install react-tabulator
+  - npm install --save react-json-view-lite
+  - npm install --save @koale/useworker --force
 
-- npm install -D tailwindcss postcss autoprefixer
-- npx tailwindcss init
-- npm install d3-geo
-- npm install d3
-  - License: ISC (The ISC license is functionally equivalent to the BSD 2-Clause and MIT licenses)
-- npm install resize-observer-polyfill --save-dev
-- npm install react-tabulator
-  - License: MIT © Oli Folkerd
-- npm install --save react-json-view-lite
-  - License: MIT © AnyRoad
-
+<!-- Some packages which were tested for their copy-paste functionality in grid-views, but which we decided against using due to licensing or compatibility: -->
 <!-- - npm install --save ag-grid-community -->
 <!-- - npm install --save ag-grid-react -->
 <!-- - npm install handsontable -->
 <!-- - npm add -D @trebco/treb -->
+<!-- tabulator -->
 
 
 
-To start the page:
+To start the page for debugging locally:
 - Open a VSC terminal
   - npm run dev
 - CTRL-Click on the localhost link

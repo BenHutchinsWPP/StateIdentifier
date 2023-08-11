@@ -5,7 +5,10 @@ import * as d3 from 'd3'
 import { JsonView, collapseAllNested, darkStyles, defaultStyles } from 'react-json-view-lite'
 import 'react-json-view-lite/dist/index.css'
 
+import { useWorker, WORKER_STATUS } from "@koale/useworker";
+
 import wppLogo from './assets/WPP-Logo.png'
+import wppLogoCircle from './assets/WPP-Logo-Circle.png'
 import stateGeoJSON from './assets/cb_2018_us_state_5m.json' // https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
 import countyGeoJSON from './assets/cb_2018_us_county_20m.json' // https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
 
@@ -140,37 +143,30 @@ function App() {
     <>
       <div>
         <a href="https://www.westernpowerpool.org/" target="_blank">
-          <img src={wppLogo} className="logo" alt="WPP Logo" />
+          <img src={wppLogoCircle} className="logo" alt="WPP Logo" />
         </a>
+        <h1>WPP State Identifier</h1>
       </div>
 
-      <h1>State Identifier</h1>
-      
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div> */}
-
       <div>Paste data here:</div>
-      <textarea ref={areaText} value={areaTextValue} onChange={e=>setAreaTextValue(e.target.value)} className="w-4/5 h-40"></textarea>
+      <textarea ref={areaText} value={areaTextValue} onChange={e=>setAreaTextValue(e.target.value)} className="w-4/5 h-40 bg-gray-200 text-black rounded-lg "></textarea>
       <div>
         Parsing Method: -
-        <select value={delimiterOption} onChange={e => setDelimiterOption(e.target.value)}>
+        <select value={delimiterOption} onChange={e => setDelimiterOption(e.target.value)} className="bg-gray-200 text-black rounded-lg">
           <option value="comma">Comma</option>
           <option value="tab">Tab</option>
         </select>
       </div>
       <div>
         GeoJSON To Use: -
-        <select value={geojsonOption} onChange={e => setGeojsonOption(e.target.value)}>
+        <select value={geojsonOption} onChange={e => setGeojsonOption(e.target.value)} className="bg-gray-200 text-black rounded-lg">
           <option value='state'>State</option>
           <option value='county'>County</option>
         </select>
       </div>
-
       <div>
-        <button onClick={e => ProcessData(areaText.current.value, delimiterLookup[delimiterOption])}>Process Data</button>
+      {/* <img src={wppLogoCircle} className="logo" alt="WPP Logo" className="animate-spin"/> */}
+      <button onClick={e => ProcessData(areaText.current.value, delimiterLookup[delimiterOption])}>Process Data</button>
       </div>
 
       <div id="content">
@@ -184,12 +180,11 @@ function App() {
       <div>
         Selected Lat/Long: {latLongDecimal.format(clickedLngLat[1])}, {latLongDecimal.format(clickedLngLat[0])}
       </div>
-      <div></div>
 
-      <div className="text-left	">
+      {/* <div className="text-left	">
         Selected Region's JSON Data: 
         <JsonView data={selectedFeature} shouldInitiallyExpand={collapseAllNested } style={darkStyles} />
-      </div>
+      </div> */}
 
     </>
   )
