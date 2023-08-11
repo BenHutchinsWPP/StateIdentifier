@@ -5,8 +5,6 @@ import * as d3 from 'd3'
 import { JsonView, collapseAllNested, darkStyles, defaultStyles } from 'react-json-view-lite'
 import 'react-json-view-lite/dist/index.css'
 
-import { useWorker, WORKER_STATUS } from "@koale/useworker";
-
 import wppLogo from './assets/WPP-Logo.png'
 import wppLogoCircle from './assets/WPP-Logo-Circle.png'
 import stateGeoJSON from './assets/cb_2018_us_state_5m.json' // https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html

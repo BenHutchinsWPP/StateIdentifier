@@ -45,7 +45,9 @@ This project was setup with the following packages:
   - npm install -D tailwindcss postcss autoprefixer
   - npm install react-tabulator
   - npm install --save react-json-view-lite
-  - npm install --save @koale/useworker --force
+
+<!-- Had to remove due to compatibility issues with compilation in GitHub Pages -->
+<!-- - npm install --save @koale/useworker --force -->
 
 <!-- Some packages which were tested for their copy-paste functionality in grid-views, but which we decided against using due to licensing or compatibility: -->
 <!-- - npm install --save ag-grid-community -->
